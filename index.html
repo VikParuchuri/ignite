@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link href="css/reset.css" rel="stylesheet" />
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="css/favicon.png" />
+    <link rel="apple-touch-icon" href="css/apple-touch-icon.png" />
+    <!-- Code Prettifier: -->
+<link href="css/highlight.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+    <link href="css/style.css" rel="stylesheet" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,800italic,300,400,800' rel='stylesheet' type='text/css'>    
+
+
+  </head>
+
+  <body>
+  <div class="fallback-message">
+  <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+  <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+  </div>
+    <div id="impress">
+    <div class='step' >
+    
+<h1>How much do characters on the Simpsons like each other?</h1>
+
+<h2>Vik Paruchuri</h2>
+
+<h2>Equirio</h2>
+</div>
+      <div class='step'  data-x="0" data-y="0" data-scale="2">
+    
+<h2>Before we start</h2>
+
+<ul>
+<li>Follow along at vikparuchuri.github.io/ignite</li>
+<li>The blog posts this presentation is based on are at <a href="http://www.vikparuchuri.com">www.vikparuchuri.com</a></li>
+</ul>
+
+<h3>Who am I?</h3>
+
+<ul>
+<li>Founder at Equirio</li>
+<li><a href="linkedin.com/in/vikparuchuri">LinkedIn</a></li>
+</ul>
+</div>
+      <div class='step'  data-x="1000" data-y="1000" data-scale="2">
+    
+<h2>The Crazy Question</h2>
+
+<h3>So I was sitting around bored one day....</h3>
+
+<p><br/></p>
+
+<p><img src="images/homer.png"  width="239" height="391" alt="Homer">
+<img src="images/bart.png"  width="284" height="391" alt="Bart"></p>
+
+<h3>Do they even like each other?</h3>
+</div>
+      <div class='step'  data-x="2000" data-y="2000" data-scale="1">
+    
+<h2>Option 1:  Work with transcripts</h2>
+
+<h3>Sadly, there aren&#39;t any with speakers labelled.</h3>
+
+<p><br/></p>
+<pre><code class='prettyprint '>I think the boy's hurt.
+Just give him a nickel and let's get going!
+I think we should call an ambulance, sir.
+Hey, cool.
+</code></pre>
+<p><br/></p>
+
+<h3>So, we should just go through all the episodes and write down who is speaking each line, right?  Right?</h3>
+
+<p><br/></p>
+
+<h3>Nah.  Don&#39;t worry, head.  The computer will do our thinking now.</h3>
+</div>
+      <div class='step'  data-x="3000" data-y="0" data-scale="1">
+    
+<h2>But training data is cool too, right?</h2>
+
+<h3>Hand-label some lines as training data.</h3>
+
+<p><br/></p>
+
+<p><img src="images/clusters.png" alt="clusters"></p>
+</div>
+      <div class='step'  data-x="4000" data-y="1000" data-scale="1">
+    
+<h2>Commonly said words</h2>
+
+<p><img src="images/commonly_said_words_initial.png" alt="words"></p>
+</div>
+      <div class='step'  data-x="5000" data-y="2000" data-scale="2">
+    
+<h2>Computer stuff</h2>
+
+<ul>
+<li>Use natural language processing and machine learning to predict who is speaking unlabelled lines.</li>
+</ul>
+
+<h3>Phew, all this computer hacking is making me thirsty, I think I&#39;ll order a tab.</h3>
+</div>
+      <div class='step'  data-x="6000" data-y="0" data-scale="2">
+    
+<h2>So, the accuracy kind of sucks</h2>
+
+<h3>Good</h3>
+<pre><code class='prettyprint '>Bart :  Dad, how would you like to be sold to an ivory dealer?
+Bart :  Dad, you're sinking!  Huh?
+Marge :  Get a rope, Bart.  No, that's okay.
+</code></pre>
+<p><br/></p>
+
+<h3>Bad</h3>
+<pre><code class='prettyprint '>Marge :  Hey, it's morning, and Mom and Dad aren't home yet.
+Tertiary :  Hey. This isn't the Y.M.C.A.
+Homer :  Dispatch, this is Chief Wiggum back in pursuit of the rebelling women.
+</code></pre>
+<p><br/></p>
+
+<h3>Kids, you tried your best and you failed miserably. The lesson is, never try.</h3>
+</div>
+      <div class='step'  data-x="7000" data-y="1000" data-scale="1">
+    
+<h2>But wait, there&#39;s more!</h2>
+
+<h3>We have been ignoring the information available via audio.</h3>
+
+<p><br/></p>
+
+<p><img src="images/homer_sound.png"  width="400" height="300" alt="Homer">
+<img src="images/lisa_sound.png"  width="400" height="300" alt="Lisa"></p>
+</div>
+      <div class='step'  data-x="8000" data-y="2000" data-scale="1">
+    
+<h2>Subtitles + Audio = Happiness</h2>
+
+<h3>Strip audio tracks from videos.</h3>
+
+<h3>Get subtitle files and sync them to audio.</h3>
+
+<p><br/></p>
+<pre><code class='prettyprint '>282
+00:17:32,523 --> 00:17:35,651
+I am so Krunchy the Clown!
+[ Belches ]
+
+283
+00:17:35,760 --> 00:17:37,955
+All right. That's it.
+</code></pre></div>
+      <div class='step'  data-x="9000" data-y="2000" data-scale="2">
+    
+<h2>Find audio &quot;fingerprint&quot; for each character</h2>
+
+<h3>Use features like zero crossing rate, MFCC, etc with our hand labelled lines.</h3>
+</div>
+      <div class='step'  data-x="10000" data-y="0" data-scale="1">
+    
+<h2>Visualizing fingerprints in 2D</h2>
+
+<p><img src="images/initial_line_plot.png" alt="line plot"></p>
+</div>
+      <div class='step'  data-x="11000" data-y="1000" data-scale="1">
+    
+<h2>Figure out the scene</h2>
+
+<ul>
+<li>Take each character, and figure out who is in the scene with them.</li>
+<li>Use labelled transcripts for this.</li>
+</ul>
+</div>
+      <div class='step'  data-x="12000" data-y="2000" data-scale="1">
+    
+<h2>Sentiment analysis</h2>
+
+<ul>
+<li>Do sentiment analysis on character dialogue to figure out if they like the people in the scene.</li>
+<li>Use random indexing and cosine similarity.</li>
+</ul>
+</div>
+      <div class='step'  data-x="13000" data-y="0" data-scale="2">
+    
+<h2>And on to the charts</h2>
+
+<p><img src="images/character_sentiments.png" alt="character sentiments"></p>
+</div>
+      <div class='step'  data-x="14000" data-y="0" data-scale="2">
+    
+<h2>Burns</h2>
+
+<p><img src="images/burns_feelings.png" alt="burns sentiments"></p>
+</div>
+      <div class='step'  data-x="15000" data-y="0" data-scale="2">
+    
+<h2>Bart</h2>
+
+<p><img src="images/bart_feelings.png" alt="bart sentiments"></p>
+</div>
+      <div class='step'  data-x="16000" data-y="0" data-scale="1">
+    
+<h2>Ways to do this better</h2>
+
+<ul>
+<li>It would be good to try to directly infer emotion/sentiment from audio.</li>
+<li>Better ways to determine &quot;in scene characters&quot;.</li>
+<li>Incorporate information from the video.</li>
+</ul>
+</div>
+      <div class='step'  data-x="17000" data-y="0" data-scale="1">
+    
+<h2>Conclusions</h2>
+
+<ul>
+<li>Analyzing audio is fun.</li>
+<li>Error rate estimation is tricky (see vikparuchuri.com for details)</li>
+<li>Maximize the information that you have -- it&#39;s not always about the algorithm you use.</li>
+</ul>
+</div>
+      <div class='step'  data-x="18000" data-y="0" data-scale="2">
+    
+<h2>Where to learn more</h2>
+
+<ul>
+<li>More information is on <a href="http://www.vikparuchuri.com">www.vikparuchuri.com</a></li>
+<li>Code is at github.com/vikparuchuri/simpsons-scripts</li>
+<li>Presentation is at vikparuchuri.github.io/ignite</li>
+</ul>
+
+<h3>Thanks for listening!</h3>
+
+      </div>
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+  </body>
+</html>
+    
